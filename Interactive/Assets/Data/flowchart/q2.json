@@ -1,0 +1,6 @@
+{
+    "id": "q2",
+    "bodyText": "body text of the second question",
+    "type": "information",
+    "goesTo": "q3"
+}

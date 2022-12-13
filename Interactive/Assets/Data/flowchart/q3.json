@@ -1,0 +1,15 @@
+{
+    "id": "q3",
+    "bodyText": "Indicate how tired you are of this questionnaire by now",
+    "type": "range",
+    "choices": [
+        {
+            "value": 1,
+            "goesTo": "final"
+        },
+        {
+            "value": 2,
+            "goesTo": "final"
+        }
+    ]
+}

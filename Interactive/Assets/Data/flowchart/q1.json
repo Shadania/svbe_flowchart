@@ -1,0 +1,17 @@
+{
+    "id": "q1",
+    "bodyText": "body text of the first question",
+    "type": "multipleChoice",
+    "choices": [
+        {
+            "id": ":)",
+            "text": "Answer text 1",
+            "goesTo": "q2"
+        },
+        {
+            "id": ":(",
+            "text": "Answer text 2",
+            "goesTo": "q3"
+        }
+    ]
+}

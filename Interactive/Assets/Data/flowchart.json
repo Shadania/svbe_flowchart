@@ -1,0 +1,10 @@
+{
+    "states": [
+        "q1", "q2", "q3", "final_marketing"
+    ],
+    "initialState": "q1",
+    "facts": [
+        "Fact 1 text",
+        "Fact 2 text"
+    ]
+}
