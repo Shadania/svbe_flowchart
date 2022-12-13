@@ -9,7 +9,7 @@ function Header() {
             </h1>
             <nav className="mx-4 flex justify-center">
                 <div class='flex flex-row'>
-                    <HeaderLink url='/' text='Home' />
+                    <HeaderLink url='/svbe_flowchart/' text='Home' />
                 </div>
             </nav>
         </header>

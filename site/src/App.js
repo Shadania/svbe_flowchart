@@ -20,7 +20,7 @@ function App() {
             </div>
             <div className="bg-slate-600 mx-8 py-8 px-8 lg:mx-16 lg:px-16 xl:mx-32 2xl:mx-64 rounded-b-lg">
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/svbe_flowchart/" element={<Home />} />
                 </Routes>
             </div>
         </Router>
