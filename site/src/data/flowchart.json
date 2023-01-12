@@ -1,0 +1,42 @@
+{
+    "initialState": "q1",
+    "states": {
+        "q1": {
+            "bodyText": "body text of the first question",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "answer 1 text",
+                    "goesTo": "q2"
+                },
+                {
+                    "text": "Answer text 2",
+                    "goesTo": "q3"
+                }
+            ]
+        },
+        "q2": {
+            "bodyText": "body text of the second question",
+            "type": "information",
+            "goesTo": "q3"
+        },
+        "q3": {
+            "bodyText": "Indicate how tired you are of this questionnaire by now",
+            "type": "range",
+            "choices": [
+                {
+                    "value": 1,
+                    "goesTo": "final_marketing"
+                },
+                {
+                    "value": 2,
+                    "goesTo": "final_marketing"
+                }
+            ]
+        },
+        "final_marketing": {
+            "bodyText": "Body text of the marketing guideline",
+            "type": "final"
+        }
+    }
+}

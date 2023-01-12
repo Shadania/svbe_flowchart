@@ -8,8 +8,9 @@ function Header() {
                 Sustainable Value-Based Entrepreneurship
             </h1>
             <nav className="mx-4 flex justify-center">
-                <div class='flex flex-row'>
+                <div className='flex flex-row'>
                     <HeaderLink url='/svbe_flowchart/' text='Home' />
+                    <HeaderLink url='/svbe_flowchart/flowchart' text='Flowchart' />
                 </div>
             </nav>
         </header>
