@@ -82,10 +82,21 @@ class Flowchart extends React.Component {
         return this.state.redoStack.length > 0
     }
 
+    reset = () => {
+        this.setState({
+            currentQ: data['initialState'],
+            stateStack: [],
+            redoStack: []
+        })
+    }
+
     render() {
         return (
             <div className="text-white" id="question_div">
                 <div>
+                    <Button onClick={this.reset} text="Reset Flowchart"
+                        visible={true}
+                    />
                     <Button onClick={this.undo} text="Undo" 
                         visible={this.canUndo()}
                     />
