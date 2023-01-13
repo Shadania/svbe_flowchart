@@ -1,9 +1,9 @@
 import Answer from '../elements/Answer.js'
 import data from '../data/flowchart.json'
 import React from "react";
+import Button from '../elements/Button.js'
 
 function renderAnswers(qData, onClick) {
-    console.log(qData['type'])
     switch(qData['type']) {
         case 'multipleChoice':
             return qData['choices'].map(
@@ -31,22 +31,68 @@ class Flowchart extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            currentQ: data['initialState']
+            currentQ: data['initialState'],
+            stateStack: [],
+            redoStack: []
         }
-        console.log(this.state.currentQ)
-
     }
 
     nextQuestion = (new_q_id) => {
-        console.log(new_q_id)
+        var newStateStack = this.state.stateStack
+        newStateStack.push(this.state.currentQ)
         this.setState({
-            currentQ: new_q_id
+            currentQ: new_q_id,
+            stateStack: newStateStack,
+            redoStack: []
         })
+    }
+
+    undo = () => {
+        var newStateStack = this.state.stateStack
+        if (newStateStack.length < 1)
+            return
+
+        var newState = newStateStack.pop()
+        var newRedoStack = this.state.redoStack
+        newRedoStack.push(this.state.currentQ)
+        this.setState({
+            currentQ: newState,
+            stateStack: newStateStack,
+            redoStack: newRedoStack
+        })
+    }
+    canUndo = () => {
+        return this.state.stateStack.length > 0
+    }
+
+    redo = () => {
+        var newStateStack = this.state.stateStack
+        var newRedoStack = this.state.redoStack
+        if (newRedoStack.length < 1)
+            return
+        var newState = newRedoStack.pop()
+        newStateStack.push(this.state.currentQ)
+        this.setState({
+            currentQ: newState,
+            stateStack: newStateStack,
+            redoStack: newRedoStack
+        })
+    }
+    canRedo = () => {
+        return this.state.redoStack.length > 0
     }
 
     render() {
         return (
             <div className="text-white" id="question_div">
+                <div>
+                    <Button onClick={this.undo} text="Undo" 
+                        visible={this.canUndo()}
+                    />
+                    <Button onClick={this.redo} text="Redo" 
+                        visible={this.canRedo()}
+                    />
+                </div>
                 <p>{data['states'][this.state.currentQ]['bodyText']}</p>
                 <div>
                     {renderAnswers(data['states'][this.state.currentQ], this.nextQuestion)}
@@ -54,9 +100,6 @@ class Flowchart extends React.Component {
             </div>
         )
     }
-    /*
-
-    */
 }
 
 export default Flowchart;
