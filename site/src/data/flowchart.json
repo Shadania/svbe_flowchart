@@ -1,12 +1,81 @@
 {
     "states": {
         "Human Resources_start": {
-            "bodyText": "Start question of HR",
+            "bodyText": "Employee wellbeing is key to moving towards a post-growth society. Keeping up morale and putting human value first will allow your employees to function at their best.",
+            "type": "information",
+            "goesTo": "hr_why"
+        },
+        "hr_why": {
+            "bodyText": "Do your employees have morale and satisfaction in their job?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Not enough",
+                    "goesTo": "hr_why_improve"
+                },
+                {
+                    "text": "Unsure",
+                    "goesTo": "hr_why_improve"
+                },
+                {
+                    "text": "Yes",
+                    "goesTo": "hr_turnover"
+                }
+            ]
+        },
+        "hr_why_improve": {
+            "bodyText": "The Human Relations Theory posits that the higher an employee's morale and satisfaction, the higher their productivity. On top of that, their emotional state can affect their performance, too. It isn't just good for the employee's wellbeing to keep them happy, but for your own business as well!",
+            "type": "information",
+            "goesTo": "hr_turnover"
+        },
+        "hr_turnover": {
+            "bodyText": "How high is your employee turnover rate?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "High: employees rarely stay longer than a year",
+                    "goesTo": "hr_turnover_improve"
+                },
+                {
+                    "text": "Unsure",
+                    "goesTo": "hr_turnover_improve"
+                },
+                {
+                    "text": "Low: employees stay many years if they are able",
+                    "goesTo": "hr_focus"
+                }
+            ]
+        },
+        "hr_turnover_improve": {
+            "bodyText": "Turnover rate can have a negative effect on your employee's mental state. Not only is it distressing to watch colleagues leave not long after getting to know them, but collaboration is hampered by the less-than-solid social and professional foundations.",
+            "type": "information",
+            "goesTo": "hr_focus"
+        },
+        "hr_focus": {
+            "bodyText": "What does your HR department/person focus on?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Keeping the company's best interests at heart",
+                    "goesTo": "hr_focus_improve"
+                },
+                {
+                    "text": "Unsure",
+                    "goesTo": "hr_focus_improve"
+                },
+                {
+                    "text": "The wellbeing of the employees",
+                    "goesTo": "hr_end"
+                }
+            ]
+        },
+        "hr_focus_improve": {
+            "bodyText": "HR management that focuses on the company can have negative consequences for employee wellbeing, while employee-focused HR practices can have  a positive impact on wellbeing.",
             "type": "information",
             "goesTo": "hr_end"
         },
         "hr_end": {
-            "bodyText": "final HR state",
+            "bodyText": "Thank you for taking the HR flowchart! Hopefully our guidelines will help you achieve maximum employee wellbeing, which will in turn maximize their productivity.",
             "type": "final"
         },
 
