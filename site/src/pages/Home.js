@@ -4,7 +4,7 @@ import FlowchartElement from '../elements/Flowchart.js'
 import SectionHeader from '../elements/SectionHeader.js'
 import Button from '../elements/Button.js'
 
-
+import {getColorBG} from '../services/colors.js'
 
 function Home() {
     const [status, setStatus] = useState('start')
@@ -17,9 +17,8 @@ function Home() {
             setBranch(title)
             setStatus('flowchart')
         }
-        const className = `grow bg-${color}-500 hover:bg-${color}-700 font-bold py-2 px-4 rounded my-2`
         return (
-            <button className={className} onClick={branchOnClick}>
+            <button className={`${getColorBG(color)} grow font-bold py-2 px-4 rounded my-2`} onClick={branchOnClick}>
                 {title}
             </button>
         )
