@@ -1,31 +1,10 @@
-import Answer from '../elements/Answer.js'
-import data from '../data/flowchart.json'
 import React from "react";
-import Button from '../elements/Button.js'
 
-function renderAnswers(qData, onClick) {
-    switch(qData['type']) {
-        case 'multipleChoice':
-            return qData['choices'].map(
-                choice => 
-                <Answer key={choice['text']} data={choice} onClick={onClick}/>
-            )
-        case 'information':
-            return (
-                <Answer data={{'text': 'Ok', 'goesTo':qData['goesTo']}} onClick={onClick} />
-            )
-        case 'range':
-            return qData['choices'].map(
-                choice =>
-                <Answer key={choice['value']} data={{'text': choice['value'].toString(), 'goesTo': choice['goesTo']}} onClick={onClick} />
-            )
-        case 'final':
-            return (<p>Done with the flowchart!</p>)
-        default:
-            console.log('unhandled question type: ' + qData['type'])
-            break;
-    }
-}
+import Button from '../elements/Button.js'
+import Answer from '../elements/Answer.js'
+import SectionHeader from '../elements/SectionHeader.js'
+
+import data from '../data/flowchart.json'
 
 class Flowchart extends React.Component {
     constructor(props) {
@@ -34,6 +13,30 @@ class Flowchart extends React.Component {
             currentQ: data['initialState'],
             stateStack: [],
             redoStack: []
+        }
+    }
+
+    renderAnswers = (qData, onClick) => {
+        switch(qData['type']) {
+            case 'multipleChoice':
+                return qData['choices'].map(
+                    choice => 
+                    <Answer key={choice['text']} data={choice} onClick={onClick} color={this.props.color}/>
+                )
+            case 'information':
+                return (
+                    <Answer data={{'text': 'Ok', 'goesTo':qData['goesTo']}} onClick={onClick} color={this.props.color} />
+                )
+            case 'range':
+                return qData['choices'].map(
+                    choice =>
+                    <Answer key={choice['value']} data={{'text': choice['value'].toString(), 'goesTo': choice['goesTo']}} onClick={onClick} color={this.props.color} />
+                )
+            case 'final':
+                return (<p>Done with the flowchart!</p>)
+            default:
+                console.log('unhandled question type: ' + qData['type'])
+                break;
         }
     }
 
@@ -93,7 +96,8 @@ class Flowchart extends React.Component {
     render() {
         const border_classname = "text-white border-solid border-2 border-slate-400 rounded-md"
         return (
-            <div id="question_div">
+            <div>
+                <SectionHeader text={this.props.title} />
                 <div className="flex flex-col space-y-2">
                     <div className={border_classname}>
                         <div className="m-3 flex flex-row space-x-2">
@@ -115,7 +119,7 @@ class Flowchart extends React.Component {
                         <div className="m-3">
                             <p>{data['states'][this.state.currentQ]['bodyText']}</p>
                             <div className="flex flex-row space-x-2">
-                                {renderAnswers(data['states'][this.state.currentQ], this.nextQuestion)}
+                                {this.renderAnswers(data['states'][this.state.currentQ], this.nextQuestion)}
                             </div>
                         </div>
                     </div>
