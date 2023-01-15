@@ -1,10 +1,11 @@
+import FlowchartElement from '../elements/Flowchart.js'
+import SectionHeader from '../elements/SectionHeader.js'
 
 function Home() {
     return (
         <div className="text-white">
-            <p>
-            Hello! This is the homepage of the interactive site for Sustainable Value-Based Entrepreneurship.
-            </p>
+            <SectionHeader text="A Journey to Sustainable Value-Based Entrepreneurship"/>
+            <FlowchartElement />
         </div>
     )
 }

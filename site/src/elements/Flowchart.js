@@ -91,22 +91,34 @@ class Flowchart extends React.Component {
     }
 
     render() {
+        const border_classname = "text-white border-solid border-2 border-slate-400 rounded-md"
         return (
-            <div className="text-white" id="question_div">
-                <div>
-                    <Button onClick={this.reset} text="Reset Flowchart"
-                        visible={true}
-                    />
-                    <Button onClick={this.undo} text="Undo" 
-                        visible={this.canUndo()}
-                    />
-                    <Button onClick={this.redo} text="Redo" 
-                        visible={this.canRedo()}
-                    />
-                </div>
-                <p>{data['states'][this.state.currentQ]['bodyText']}</p>
-                <div>
-                    {renderAnswers(data['states'][this.state.currentQ], this.nextQuestion)}
+            <div id="question_div">
+                <div className="flex flex-col space-y-2">
+                    <div className={border_classname}>
+                        <div className="m-3 flex flex-row space-x-2">
+                            <Button onClick={this.reset} text="Reset Flowchart"
+                                visible={true}
+                            />
+                            <Button onClick={this.undo} text="Undo" 
+                                visible={this.canUndo()}
+                            />
+                            <Button onClick={this.redo} text="Redo" 
+                                visible={this.canRedo()}
+                            />
+                        </div>
+                    </div>
+                    
+                    
+
+                    <div className={border_classname}>
+                        <div className="m-3">
+                            <p>{data['states'][this.state.currentQ]['bodyText']}</p>
+                            <div className="flex flex-row space-x-2">
+                                {renderAnswers(data['states'][this.state.currentQ], this.nextQuestion)}
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         )

@@ -5,3 +5,7 @@
 body {
     background-color: slategray
 }
+
+.border-slategray {
+    border-color: slategray
+}
