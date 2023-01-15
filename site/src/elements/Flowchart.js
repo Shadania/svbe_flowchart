@@ -10,7 +10,7 @@ class Flowchart extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            currentQ: data['initialState'],
+            currentQ: this.props.start,
             stateStack: [],
             redoStack: []
         }
@@ -87,7 +87,7 @@ class Flowchart extends React.Component {
 
     reset = () => {
         this.setState({
-            currentQ: data['initialState'],
+            currentQ: data[this.props.start],
             stateStack: [],
             redoStack: []
         })

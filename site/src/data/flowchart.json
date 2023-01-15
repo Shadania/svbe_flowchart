@@ -1,41 +1,81 @@
 {
-    "initialState": "q1",
     "states": {
-        "q1": {
+        "Human Resources_start": {
+            "bodyText": "Start question of HR",
+            "type": "information",
+            "goesTo": "hr_end"
+        },
+        "hr_end": {
+            "bodyText": "final HR state",
+            "type": "final"
+        },
+
+        "Product Design_start": {
+            "bodyText": "Start question of design",
+            "type": "information",
+            "goesTo": "pd_end"
+        },
+        "pd_end": {
+            "bodyText": "final screen for design",
+            "type": "final"
+        },
+
+        "Supply Chain_start": {
+            "bodyText": "first screen of supply chain",
+            "type": "information",
+            "goesTo": "sc_end"
+        },
+        "sc_end": {
+            "bodyText": "end screen supply chain",
+            "type": "final"
+        },
+
+        "Marketing_start": {
+            "bodyText": "marketing start!!!",
+            "type": "information",
+            "goesTo": "marketing_end"
+        },
+        "marketing_end": {
+            "bodyText": "end of marketing.",
+            "type": "final"
+        },
+
+
+        "example_multiplechoice": {
             "bodyText": "body text of the first question",
             "type": "multipleChoice",
             "choices": [
                 {
                     "text": "answer 1 text",
-                    "goesTo": "q2"
+                    "goesTo": "example_information"
                 },
                 {
                     "text": "Answer text 2",
-                    "goesTo": "q3"
+                    "goesTo": "example_range"
                 }
             ]
         },
-        "q2": {
+        "example_information": {
             "bodyText": "body text of the second question",
             "type": "information",
-            "goesTo": "q3"
+            "goesTo": "example_range"
         },
-        "q3": {
+        "example_range": {
             "bodyText": "Indicate how tired you are of this questionnaire by now",
             "type": "range",
             "choices": [
                 {
                     "value": 1,
-                    "goesTo": "final_marketing"
+                    "goesTo": "example_final"
                 },
                 {
                     "value": 2,
-                    "goesTo": "final_marketing"
+                    "goesTo": "example_final"
                 }
             ]
         },
-        "final_marketing": {
-            "bodyText": "Body text of the marketing guideline",
+        "example_final": {
+            "bodyText": "Body text of the final guideline",
             "type": "final"
         }
     }
