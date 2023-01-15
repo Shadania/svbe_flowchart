@@ -9,7 +9,7 @@ import {
 import Header from "./elements/Header.js";
 
 import Home from './pages/Home.js';
-import Flowchart from './pages/Flowchart.js'
+//import Flowchart from './pages/Flowchart.js'
 
 function App() {
    return (
@@ -22,7 +22,7 @@ function App() {
             <div className="bg-slate-600 mx-8 py-8 px-8 lg:mx-16 lg:px-16 xl:mx-32 2xl:mx-64 rounded-b-lg">
                 <Routes>
                     <Route path="/svbe_flowchart/" element={<Home />} />
-                    <Route path="/svbe_flowchart/flowchart" element={<Flowchart />} />
+                    {/* <Route path="/svbe_flowchart/flowchart" element={<Flowchart />} /> */}
                 </Routes>
             </div>
         </Router>
