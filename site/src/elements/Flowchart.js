@@ -15,7 +15,16 @@ class Flowchart extends React.Component {
             redoStack: []
         }
     }
-
+    renderAdvice = () => {
+        var advice = []
+        for (var i = 0; i < this.state.stateStack.length; i++) {
+            const thisState = this.state.stateStack[i]
+            if (data.states[thisState].type == 'information') {
+                advice.push(data.states[thisState].bodyText)
+            }
+        }
+        return advice
+    }
     renderAnswers = (qData, onClick) => {
         switch(qData['type']) {
             case 'multipleChoice':
@@ -33,7 +42,12 @@ class Flowchart extends React.Component {
                     <Answer key={choice['value']} data={{'text': choice['value'].toString(), 'goesTo': choice['goesTo']}} onClick={onClick} color={this.props.color} />
                 )
             case 'final':
-                return (<p>Done with the flowchart!</p>)
+                return (
+                    <div>
+                        <p>Done with the flowchart! Here is the final collected advice:</p>
+                        <ul className="list-disc ml-4">{this.renderAdvice().map(advice => <li>{advice}</li>)}</ul>
+                    </div>
+                )
             default:
                 console.log('unhandled question type: ' + qData['type'])
                 break;
