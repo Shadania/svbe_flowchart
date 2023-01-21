@@ -1,4 +1,3 @@
-
 import HeaderLink from './HeaderLink.js'
 
 function Header() {
@@ -10,7 +9,6 @@ function Header() {
             <nav className="mx-4 flex justify-center">
                 <div className='flex flex-row'>
                     <HeaderLink url='/svbe_flowchart/' text='Home' />
-                    {/* <HeaderLink url='/svbe_flowchart/flowchart' text='Flowchart' /> */}
                 </div>
             </nav>
         </header>

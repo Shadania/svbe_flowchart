@@ -1,150 +1,147 @@
 {
     "states": {
-        "Human Resources_start": {
-            "bodyText": "Employee wellbeing is key to moving towards a post-growth society. Keeping up morale and putting human value first will allow your employees to function at their best.",
-            "type": "information",
-            "goesTo": "hr_why"
-        },
-        "hr_why": {
-            "bodyText": "Do your employees have morale and satisfaction in their job?",
+        "_start": {
+            "bodyText": "To help you on your journey, we have organized our advice by management branch.",
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Not enough",
-                    "goesTo": "hr_why_improve"
+                    "text": "Pick a branch",
+                    "goesTo": "_pickbranch"
                 },
                 {
-                    "text": "Unsure",
-                    "goesTo": "hr_why_improve"
-                },
-                {
-                    "text": "Yes",
-                    "goesTo": "hr_turnover"
+                    "text": "Get help picking a branch",
+                    "goesTo": "q0"
                 }
             ]
         },
-        "hr_why_improve": {
-            "bodyText": "The Human Relations Theory posits that the higher an employee's morale and satisfaction, the higher their productivity. On top of that, their emotional state can affect their performance, too. It isn't just good for the employee's wellbeing to keep them happy, but for your own business as well!",
-            "type": "information",
-            "goesTo": "hr_turnover"
-        },
-        "hr_turnover": {
-            "bodyText": "How high is your employee turnover rate?",
+        "_pickbranch": {
+            "bodyText": "Choose a branch:",
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "High: employees rarely stay longer than a year",
-                    "goesTo": "hr_turnover_improve"
+                    "text": "Human Resources",
+                    "goesTo": "_pick_hr"
                 },
                 {
-                    "text": "Unsure",
-                    "goesTo": "hr_turnover_improve"
+                    "text": "Product Design",
+                    "goesTo": "branch_pd_start",
+                    "branch": "Product Design",
+                    "title": "Product Design"
                 },
                 {
-                    "text": "Low: employees stay many years if they are able",
-                    "goesTo": "hr_focus"
+                    "text": "Supply Chain",
+                    "goesTo": "branch_sc_start",
+                    "branch": "Supply Chain",
+                    "title": "Supply Chain"
+                },
+                {
+                    "text": "Marketing",
+                    "goesTo": "branch_mark_start",
+                    "branch": "Marketing",
+                    "title": "Marketing"
                 }
             ]
         },
-        "hr_turnover_improve": {
-            "bodyText": "Turnover rate can have a negative effect on your employee's mental state. Not only is it distressing to watch colleagues leave not long after getting to know them, but collaboration is hampered by the less-than-solid social and professional foundations.",
-            "type": "information",
-            "goesTo": "hr_focus"
-        },
-        "hr_focus": {
-            "bodyText": "What does your HR department/person focus on?",
+        "_pick_hr": {
+            "bodyText": "Choose a Human Resources sub-branch:",
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Keeping the company's best interests at heart",
-                    "goesTo": "hr_focus_improve"
+                    "text": "Employee Wellbeing",
+                    "goesTo": "branch_hr_ew_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Employee Wellbeing"
                 },
                 {
-                    "text": "Unsure",
-                    "goesTo": "hr_focus_improve"
-                },
-                {
-                    "text": "The wellbeing of the employees",
-                    "goesTo": "hr_end"
+                    "text": "Strategic Planning",
+                    "goesTo": "branch_hr_sp_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Strategic Planning"
                 }
             ]
         },
-        "hr_focus_improve": {
-            "bodyText": "HR management that focuses on the company can have negative consequences for employee wellbeing, while employee-focused HR practices can have  a positive impact on wellbeing.",
-            "type": "information",
-            "goesTo": "hr_end"
-        },
-        "hr_end": {
-            "bodyText": "Thank you for taking the HR flowchart! Hopefully our guidelines will help you achieve maximum employee wellbeing, which will in turn maximize their productivity.",
-            "type": "final"
-        },
-
-        "Product Design_start": {
-            "bodyText": "Start question of design",
-            "type": "information",
-            "goesTo": "pd_end"
-        },
-        "pd_end": {
-            "bodyText": "final screen for design",
-            "type": "final"
-        },
-
-        "Supply Chain_start": {
-            "bodyText": "first screen of supply chain",
-            "type": "information",
-            "goesTo": "sc_end"
-        },
-        "sc_end": {
-            "bodyText": "end screen supply chain",
-            "type": "final"
-        },
-
-        "Marketing_start": {
-            "bodyText": "marketing start!!!",
-            "type": "information",
-            "goesTo": "marketing_end"
-        },
-        "marketing_end": {
-            "bodyText": "end of marketing.",
-            "type": "final"
-        },
 
 
-        "example_multiplechoice": {
-            "bodyText": "body text of the first question",
+        "q0": {
+            "bodyText": "Is your company's reputation with the public important? (Select the most fitting option)",
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "answer 1 text",
-                    "goesTo": "example_information"
+                    "text": "Yes: I want my company to have iconic branding",
+                    "goesTo": "branch_mark_start",
+                    "branch": "Marketing",
+                    "title": "Marketing"
                 },
                 {
-                    "text": "Answer text 2",
-                    "goesTo": "example_range"
+                    "text": "Yes: I want to be known for being a good employer and giving my employees appropriate training and chances",
+                    "goesTo": "branch_hr_ew_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Employee Wellbeing"
+                },
+                {
+                    "text": "Yes: I want to be known for developing sustainable products",
+                    "goesTo": "q1"
+                },
+                {
+                    "text": "Not particularly: I care more about planning out my goals and achieving them regardless of what people think of my business",
+                    "goesTo": "branch_hr_sp_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Strategic Planning"
                 }
             ]
         },
-        "example_information": {
-            "bodyText": "body text of the second question",
-            "type": "information",
-            "goesTo": "example_range"
-        },
-        "example_range": {
-            "bodyText": "Indicate how tired you are of this questionnaire by now",
-            "type": "range",
+        "q1": {
+            "bodyText": "What is the most important factor in developing sustainable products for you? (Select the most fitting option)",
+            "type": "multipleChoice",
             "choices": [
                 {
-                    "value": 1,
-                    "goesTo": "example_final"
+                    "text": "A happy employee: you can't have sustainable products if your workers suffer",
+                    "goesTo": "branch_hr_ew_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Employee Wellbeing"
                 },
                 {
-                    "value": 2,
-                    "goesTo": "example_final"
+                    "text": "Social responsibility: you can't make sustainable products if the neighborhood you are located in suffers because of your operations",
+                    "goesTo": "branch_mark_start",
+                    "branch": "Marketing",
+                    "title": "Marketing"
+                },
+                {
+                    "text": "The product's design: creating products that are easy to repair/recycle",
+                    "goesTo": "branch_pd_start",
+                    "branch": "Product Design",
+                    "title": "Product Design"
+                },
+                {
+                    "text": "The materials I use in my products: sourcing sustainably ensures I don't damage the environment, or I might even be able to help regenerate it",
+                    "goesTo": "branch_sc_start",
+                    "branch": "Supply Chain",
+                    "title": "Supply Chain"
                 }
             ]
         },
-        "example_final": {
-            "bodyText": "Body text of the final guideline",
+
+        "branch_mark_start": {
+            "bodyText": "temp",
+            "type": "final"
+        },
+
+        "branch_hr_ew_start": {
+            "bodyText": "temp",
+            "type": "final"
+        },
+        "branch_hr_sp_start": {
+            "bodyText": "temp",
+            "type": "final"
+        },
+
+        "branch_pd_start": {
+            "bodyText": "temp",
+            "type": "final"
+        },
+
+        "branch_sc_start": {
+            "bodyText": "temp",
             "type": "final"
         }
     }

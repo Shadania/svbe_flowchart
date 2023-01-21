@@ -1,0 +1,41 @@
+{
+    "states": {
+        "example_multiplechoice": {
+            "bodyText": "body text of the first question",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "answer 1 text",
+                    "goesTo": "example_information"
+                },
+                {
+                    "text": "Answer text 2",
+                    "goesTo": "example_range"
+                }
+            ]
+        },
+        "example_information": {
+            "bodyText": "body text of the second question",
+            "type": "information",
+            "goesTo": "example_range"
+        },
+        "example_range": {
+            "bodyText": "Indicate how tired you are of this questionnaire by now",
+            "type": "range",
+            "choices": [
+                {
+                    "value": 1,
+                    "goesTo": "example_final"
+                },
+                {
+                    "value": 2,
+                    "goesTo": "example_final"
+                }
+            ]
+        },
+        "example_final": {
+            "bodyText": "Body text of the final guideline",
+            "type": "final"
+        }
+    }
+}
