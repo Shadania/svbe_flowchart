@@ -182,33 +182,19 @@ class Flowchart extends React.Component {
         const border_classname = "text-white border-solid border-2 border-slate-400 rounded-md"
         return (
             <div>
+                <div className="flex justify-end">
+                    <Button onClick={this.reset} text="Reset Flowchart"
+                        visible={true}
+                    />
+                </div>
+                
                 <SectionHeader text={this.state.title} />
-                <div className="flex flex-col space-y-2">
-                    <div className={border_classname}>
-                        <div className="m-3 flex flex-row space-x-2">
-                            <Button onClick={this.reset} text="Reset Flowchart"
-                                visible={true}
-                            />
-                            {/*
-                                <Button onClick={this.undo} text="Undo" 
-                                    visible={this.canUndo()}
-                                />
-                                <Button onClick={this.redo} text="Redo" 
-                                    visible={this.canRedo()}
-                                />
-                            */}
-                        </div>
-                    </div>
-                    
-                    
-
-                    <div className={border_classname}>
+                <div className={border_classname}>
                         <div className="m-3">
                             <p className="my-2">{data['states'][this.state.currentQ]['bodyText']}</p>
                                 {this.renderAnswers(data['states'][this.state.currentQ], this.nextQuestion)}
                         </div>
                     </div>
-                </div>
             </div>
         )
     }
