@@ -182,13 +182,15 @@ class Flowchart extends React.Component {
         const border_classname = "text-white border-solid border-2 border-slate-400 rounded-md"
         return (
             <div>
-                <div className="flex justify-end">
+                <div className="flex justify-between">
+                    <SectionHeader text={this.state.title} />
                     <Button onClick={this.reset} text="Reset Flowchart"
                         visible={true}
                     />
                 </div>
+
                 
-                <SectionHeader text={this.state.title} />
+                
                 <div className={border_classname}>
                         <div className="m-3">
                             <p className="my-2">{data['states'][this.state.currentQ]['bodyText']}</p>
