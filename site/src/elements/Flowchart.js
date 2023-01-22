@@ -34,7 +34,8 @@ class Flowchart extends React.Component {
         switch(qData['type']) {
             case 'multipleChoice':
                 const answerCount = qData['choices'].length
-                const extraClass = (answerCount === 4)? 'w-1/2' : ''
+                var extraClass = (answerCount === 4 || answerCount === 2)? 'w-1/2' : ''
+                if (answerCount === 3) extraClass = 'w-1/3'
 
                 var answers = qData['choices'].map( choice => {
                     var color = this.state.color
@@ -60,7 +61,7 @@ class Flowchart extends React.Component {
                     )
                 })
                 
-                if (answers.length === 4) {
+                if (answerCount === 4) {
                     const html = (
                         <div className="flex flex-col space-y-4">
                             <div className="flex flex-row space-x-4">

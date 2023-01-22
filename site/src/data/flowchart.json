@@ -20,25 +20,27 @@
             "choices": [
                 {
                     "text": "Human Resources",
-                    "goesTo": "_pick_hr"
+                    "goesTo": "_pick_hr",
+                    "branch": "Human Resources",
+                    "title": "Pick a Sub-branch"
                 },
                 {
                     "text": "Product Design",
                     "goesTo": "branch_pd_start",
                     "branch": "Product Design",
-                    "title": "Product Design"
+                    "title": "Product Design: Circular-Driven Designs"
                 },
                 {
                     "text": "Supply Chain",
                     "goesTo": "branch_sc_start",
                     "branch": "Supply Chain",
-                    "title": "Supply Chain"
+                    "title": "Supply Chain: Sustainable Material Sourcing"
                 },
                 {
                     "text": "Marketing",
-                    "goesTo": "branch_mark_start",
+                    "goesTo": "_pick_mark",
                     "branch": "Marketing",
-                    "title": "Marketing"
+                    "title": "Pick a Sub-branch"
                 }
             ]
         },
@@ -57,6 +59,30 @@
                     "goesTo": "branch_hr_sp_start",
                     "branch": "Human Resources",
                     "title": "Human Resources: Strategic Planning"
+                },
+                {
+                    "text": "Co-creation of Sustainability",
+                    "goesTo": "branch_hr_ccs_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Co-creation of Sustainability"
+                }
+            ]
+        },
+        "_pick_mark": {
+            "bodyText": "Choose a Marketing sub-branch:",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Purpose-Driven Marketing",
+                    "goesTo": "branch_mark_pd_start",
+                    "branch": "Marketing",
+                    "title": "Marketing: Purpose-Driven Marketing"
+                },
+                {
+                    "text": "Education Investments",
+                    "goesTo": "branch_mark_ei_start",
+                    "branch": "Marketing",
+                    "title": "Marketing: Education Investments"
                 }
             ]
         },
@@ -67,16 +93,12 @@
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Yes: I want my company to have iconic branding",
-                    "goesTo": "branch_mark_start",
-                    "branch": "Marketing",
-                    "title": "Marketing"
+                    "text": "Yes: I want my company to be iconic",
+                    "goesTo": "q3"
                 },
                 {
-                    "text": "Yes: I want to be known for being a good employer and giving my employees appropriate training and chances",
-                    "goesTo": "branch_hr_ew_start",
-                    "branch": "Human Resources",
-                    "title": "Human Resources: Employee Wellbeing"
+                    "text": "Yes: I want to be known for being a good employer and an attractive place to work",
+                    "goesTo": "q2"
                 },
                 {
                     "text": "Yes: I want to be known for developing sustainable products",
@@ -84,9 +106,7 @@
                 },
                 {
                     "text": "Not particularly: I care more about planning out my goals and achieving them regardless of what people think of my business",
-                    "goesTo": "branch_hr_sp_start",
-                    "branch": "Human Resources",
-                    "title": "Human Resources: Strategic Planning"
+                    "goesTo": "q4"
                 }
             ]
         },
@@ -110,21 +130,179 @@
                     "text": "The product's design: creating products that are easy to repair/recycle",
                     "goesTo": "branch_pd_start",
                     "branch": "Product Design",
-                    "title": "Product Design"
+                    "title": "Product Design: Circular-Driven Designs"
                 },
                 {
                     "text": "The materials I use in my products: sourcing sustainably ensures I don't damage the environment, or I might even be able to help regenerate it",
                     "goesTo": "branch_sc_start",
                     "branch": "Supply Chain",
-                    "title": "Supply Chain"
+                    "title": "Supply Chain: Sustainable Material Sourcing"
+                }
+            ]
+        },
+        "q2": {
+            "bodyText": "Out of the following options, what is your priority for your employees?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Their wellbeing: I want them to be happy working for me",
+                    "goesTo": "branch_hr_ew_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Employee Wellbeing"
+                },
+                {
+                    "text": "Their potential contributions: I believe in listening to their ideas and giving them a chance at implementation",
+                    "goesTo": "branch_hr_ccs_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Co-creation of Sustainability"
+                }
+            ]
+        },
+        "q3": {
+            "bodyText": "What about your branding do you want to be iconic?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "I want to be known for our values and the causes we support",
+                    "goesTo": "branch_mark_pd_start",
+                    "branch": "Marketing",
+                    "title": "Marketing: Purpose-Driven Marketing"
+                },
+                {
+                    "text": "I want to be known for giving back to my community",
+                    "goesTo": "branch_mark_ei_start",
+                    "branch": "Marketing",
+                    "title": "Marketing: Education Investments"
+                }
+            ]
+        },
+        "q4": {
+            "bodyText": "What are your priorities as an SME interested in sustainability?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Ensuring that my workforce is competent and is able to achieve our goals",
+                    "goesTo": "branch_hr_sp_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Strategic Planning"
+                },
+                {
+                    "text": "I want to give back to my local community",
+                    "goesTo": "branch_mark_ei_start",
+                    "branch": "Marketing",
+                    "title": "Marketing: Education Investments"
                 }
             ]
         },
 
-        "branch_mark_start": {
+
+        "branch_mark_pd_start": {
+            "bodyText": "Does your company have a set of core values, that are enforced within the business and broadcast to the public?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Yes",
+                    "goesTo": "mark_pd_0"
+                },
+                {
+                    "text": "Yes, but not enforced",
+                    "goesTo": "mark_pd_1"
+                },
+                {
+                    "text": "Yes, but not broadcast",
+                    "goesTo": "mark_pd_2"
+                },
+                {
+                    "text": "No",
+                    "goesTo": "mark_pd_3"
+                }
+            ]
+        },
+        "mark_pd_1": {
+            "bodyText": "It is important to also enforce the values you talk about towards the public within your company. Else, you might get accused of greenwashing, and that will destroy your positive brand image.",
+            "type": "information",
+            "goesTo": "mark_pd_0"
+        },
+        "mark_pd_2": {
+            "bodyText": "If you are already adhering to a set of values within the company, those can be a powerful marketing tool towards the public: you might gain customers who share your views simply by telling them about what you value.",
+            "type": "information",
+            "goesTo": "mark_pd_0"
+        },
+        "mark_pd_3": {
+            "bodyText": "It can be useful to have a set of values to adhere to that you can then tell the public about. Employees might feel more of a sense of purpose with them, and the public might be able to relate to you as a business entity more.",
+            "type": "information",
+            "goesTo": "mark_pd_0"
+        },
+        "mark_pd_0": {
+            "bodyText": "Is there a social cause or similar that you as a company support?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Yes, and it is in line with our values or we do not have values",
+                    "goesTo": "mark_pd_4"
+                },
+                {
+                    "text": "Yes, but it clashes with our values",
+                    "goesTo": "mark_pd_5"
+                },
+                {
+                    "text": "No, because we can't find any that adhere to our values",
+                    "goesTo": "mark_pd_5.5"
+                },
+                {
+                    "text": "No, for other reasons",
+                    "goesTo": "mark_pd_6"
+                }
+            ]
+        },
+        "mark_pd_5": {
+            "bodyText": "It might be worth to either change your values to align better with the cause you support, or to change the cause itself. The goal is to present a unified front to your target audience, not to confuse them.",
+            "type": "information",
+            "goesTo": "mark_pd_4"
+        },
+        "mark_pd_5.5": {
+            "bodyText": "It can be beneficial to your image to align yourself with a social cause, but if there are none, you might want to consider creating one based on your values. You might be able to ask your employees for ideas if you don't have any (see also the HR: Co-creation branch)",
+            "type": "information",
+            "goesTo": "mark_pd_4"
+        },
+        "mark_pd_6": {
+            "bodyText": "Finding a social cause to support will make your customer like your brand more. It might also give your employees more of a sense of purpose, to feel that they're supporting something outside of the company with their work there.",
+            "type": "information",
+            "goesTo": "mark_pd_4"
+        },
+        "mark_pd_4": {
+            "bodyText": "When marketing products, what does your company focus on?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Showcase the qualities of the product, e.g. say it is cheaper than the competition",
+                    "goesTo": "mark_pd_7"
+                },
+                {
+                    "text": "Present the company's values and causes that it supports, show what will be done with profits made",
+                    "goesTo": "mark_pd_8"
+                },
+                {
+                    "text": "Market towards a certain target audience or lifestyle, e.g. show an athletic person using your product to perform better",
+                    "goesTo": "mark_pd_7"
+                }
+            ]
+        },
+        "mark_pd_7": {
+            "bodyText": "Your marketing approach is focused on making people want a product for the sake of having the product. With younger generations, this approach will work less and less effectively. Consider switching to a more socially aware branding strategy.",
+            "type": "information",
+            "goesTo": "mark_pd_8"
+        },
+        "mark_pd_8": {
+            "bodyText": "",
+            "type": "final"
+        },
+
+        "branch_mark_ei_start": {
             "bodyText": "temp",
             "type": "final"
         },
+
 
         "branch_hr_ew_start": {
             "bodyText": "temp",
@@ -134,11 +312,17 @@
             "bodyText": "temp",
             "type": "final"
         },
+        "branch_hr_ccs_start": {
+            "bodyText": "temp",
+            "type": "final"
+        },
+
 
         "branch_pd_start": {
             "bodyText": "temp",
             "type": "final"
         },
+
 
         "branch_sc_start": {
             "bodyText": "temp",
