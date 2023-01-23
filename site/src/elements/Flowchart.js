@@ -28,7 +28,16 @@ class Flowchart extends React.Component {
                 advice.push(data.states[thisState].bodyText)
             }
         }
-        return advice
+
+        if (advice.length == 0){
+            return (<p>No advice for you on this branch! Congratulations, you are doing very well! Try another branch?</p>)
+        }
+        return (
+            <div>
+                <ul className="list-disc ml-4">{advice.map(advice => <li>{advice}</li>)}</ul>
+                <p>Good luck on your journey!</p>
+            </div>
+        )
     }
     renderAnswers = (qData, onClick) => {
         switch(qData['type']) {
@@ -99,7 +108,7 @@ class Flowchart extends React.Component {
                 return (
                     <div>
                         <p>Done with the flowchart! Here is the final collected advice:</p>
-                        <ul className="list-disc ml-4">{this.renderAdvice().map(advice => <li>{advice}</li>)}</ul>
+                        {this.renderAdvice()}
                     </div>
                 )
             default:
