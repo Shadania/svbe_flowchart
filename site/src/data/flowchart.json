@@ -38,9 +38,9 @@
                 },
                 {
                     "text": "Marketing",
-                    "goesTo": "_pick_mark",
+                    "goesTo": "branch_mark_pd_start",
                     "branch": "Marketing",
-                    "title": "Pick a Sub-branch"
+                    "title": "Marketing: Purpose-Driven Marketing"
                 }
             ]
         },
@@ -68,24 +68,6 @@
                 }
             ]
         },
-        "_pick_mark": {
-            "bodyText": "Choose a Marketing sub-branch:",
-            "type": "multipleChoice",
-            "choices": [
-                {
-                    "text": "Purpose-Driven Marketing",
-                    "goesTo": "branch_mark_pd_start",
-                    "branch": "Marketing",
-                    "title": "Marketing: Purpose-Driven Marketing"
-                },
-                {
-                    "text": "Education Investments",
-                    "goesTo": "branch_mark_ei_start",
-                    "branch": "Marketing",
-                    "title": "Marketing: Education Investments"
-                }
-            ]
-        },
 
 
         "q0": {
@@ -93,8 +75,10 @@
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Yes: I want my company to be iconic",
-                    "goesTo": "q3"
+                    "text": "Yes: I want my company to be iconic, to be known for our values and the causes we support",
+                    "goesTo": "branch_mark_pd_start",
+                    "branch": "Marketing",
+                    "title": "Marketing: Purpose-Driven Marketing"
                 },
                 {
                     "text": "Yes: I want to be known for being a good employer and an attractive place to work",
@@ -105,8 +89,10 @@
                     "goesTo": "q1"
                 },
                 {
-                    "text": "Not particularly: I care more about planning out my goals and achieving them regardless of what people think of my business",
-                    "goesTo": "q4"
+                    "text": "Not particularly: I care more about planning out my goals and ensuring that my workforce is capable of achieving them",
+                    "goesTo": "branch_hr_sp_start",
+                    "branch": "Human Resources",
+                    "title": "Human Resources: Strategic Planning"
                 }
             ]
         },
@@ -155,42 +141,6 @@
                     "goesTo": "branch_hr_ccs_start",
                     "branch": "Human Resources",
                     "title": "Human Resources: Co-creation of Sustainability"
-                }
-            ]
-        },
-        "q3": {
-            "bodyText": "What about your branding do you want to be iconic?",
-            "type": "multipleChoice",
-            "choices": [
-                {
-                    "text": "I want to be known for our values and the causes we support",
-                    "goesTo": "branch_mark_pd_start",
-                    "branch": "Marketing",
-                    "title": "Marketing: Purpose-Driven Marketing"
-                },
-                {
-                    "text": "I want to be known for giving back to my community",
-                    "goesTo": "branch_mark_ei_start",
-                    "branch": "Marketing",
-                    "title": "Marketing: Education Investments"
-                }
-            ]
-        },
-        "q4": {
-            "bodyText": "What are your priorities as an SME interested in sustainability?",
-            "type": "multipleChoice",
-            "choices": [
-                {
-                    "text": "Ensuring that my workforce is competent and is able to achieve our goals",
-                    "goesTo": "branch_hr_sp_start",
-                    "branch": "Human Resources",
-                    "title": "Human Resources: Strategic Planning"
-                },
-                {
-                    "text": "I want to give back to my local community",
-                    "goesTo": "branch_mark_ei_start",
-                    "branch": "Marketing",
-                    "title": "Marketing: Education Investments"
                 }
             ]
         },
@@ -295,11 +245,6 @@
         },
         "mark_pd_8": {
             "bodyText": "",
-            "type": "final"
-        },
-
-        "branch_mark_ei_start": {
-            "bodyText": "temp",
             "type": "final"
         },
 
