@@ -540,7 +540,114 @@
 
 
         "branch_pd_start": {
-            "bodyText": "temp",
+            "bodyText": "How robust is your product?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Single-use.",
+                    "goesTo": "branch_pd_1.1"
+                },
+                {
+                    "text": "It will last for the period of the warranty.",
+                    "goesTo": "branch_pd_1.2"
+                },
+                {
+                    "text": "It will last as long as we can make it last.",
+                    "goesTo": "branch_pd_1.3"
+                },
+                {
+                    "text": "Our product is actually the service our product provides: e.g. we provide the service of 'light' and maintain the lightbulbs in a building for a recurring fee instead of just selling lightbulbs.",
+                    "goesTo": "branch_pd_2"
+                }
+            ]
+        },
+        "branch_pd_1.1": {
+            "bodyText": "Single-use product design is often born out of a desire for convenience. Does a multi-use version of your current product exist? It may be the case that your target audience, becoming more climate-conscious, will prefer reusable products over convenient single-use ones.",
+            "type": "information",
+            "goesTo": "branch_pd_2"
+        },
+        "branch_pd_1.2": {
+            "bodyText": "Products are supposed to last the period of the warranty, but if they remain usable beyond that, your brand will become known for high product quality. Everyone knows the joke about how if you throw a Nokia brick phone at a wall, it is the wall that will break. Aim for the infamous longevity of Nokia bricks.",
+            "type": "information",
+            "goesTo": "branch_pd_2"
+        },
+        "branch_pd_1.3": {
+            "bodyText": "Your product is as good as you can make it, congratulations! Have you considered, instead of just offering the products, to offer the use of these products as a service? This would involve maintaining your leased-out products and repairing/replacing them when they break, and you charge the client a recurring fee. It is a model gaining in popularity, and it encourages circularity, longer product lifespans and product quality.",
+            "type": "information",
+            "goesTo": "branch_pd_2"
+        },
+        "branch_pd_2": {
+            "bodyText": "How easy is it to break your product back down into its components, for e.g. repair or salvaging parts?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Not easy at all: it is not supposed to be broken apart.",
+                    "goesTo": "branch_pd_2.1"
+                },
+                {
+                    "text": "This is not something we take into consideration.",
+                    "goesTo": "branch_pd_2.2"
+                },
+                {
+                    "text": "This is not applicable for my product.",
+                    "goesTo": "branch_pd_3"
+                },
+                {
+                    "text": "Easy: it is designed with ease of repair/refurbishing in mind.",
+                    "goesTo": "branch_pd_2b"
+                }
+            ]
+        },
+        "branch_pd_2.1": {
+            "bodyText": "Consider the material cost for making a new product from scratch instead of e.g. making one with parts from another product. You stand to gain brand popularity as a repair-friendly producer if you make your products easy to take apart.",
+            "type": "information",
+            "goesTo": "branch_pd_3"
+        },
+        "branch_pd_2.2": {
+            "bodyText": "Consider taking ideas for product repair and refurbishment into the design of your products: by making them easy to repair or refurbish, you stand to gain brand popularity, and you can market it as repairable/mark up the price for the feature.",
+            "type": "information",
+            "goesTo": "branch_pd_3"
+        },
+        "branch_pd_2b": {
+            "bodyText": "Do you collect old parts/products to repair/refurbish yourself, or are you connected to repair shops who take up this process for your products?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Yes.",
+                    "goesTo": "branch_pd_3"
+                },
+                {
+                    "text": "No.",
+                    "goesTo": "branch_pd_2b.1"
+                }
+            ]
+        },
+        "branch_pd_2b.1": {
+            "bodyText": "You could look into creating/managing repair shops for your products. This can improve your brand's public image, and you can keep control over where your products go and what happens to them.",
+            "type": "information",
+            "goesTo": "branch_pd_3"
+        },
+        "branch_pd_3": {
+            "bodyText": "Does your product design take remanufacturing or recycling into account?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Yes.",
+                    "goesTo": "branch_pd_end"
+                },
+                {
+                    "text": "No.",
+                    "goesTo": "branch_pd_3.1"
+                }
+            ]
+        },
+        "branch_pd_3.1": {
+            "bodyText": "Consider taking remanufacturing and recycling into account when designing your products. They will eventually reach the end of their lifecycle, and when that happens, they will need to be disposed of, or if possible, transformed into something else. When you design your product with this in mind, you will make your long-time customers happy, and you will gain brand popularity as an environmentally conscious company.",
+            "type": "information",
+            "goesTo": "branch_pd_end"
+        },
+        "branch_pd_end": {
+            "bodyText": "",
             "type": "final"
         },
 
