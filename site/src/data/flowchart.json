@@ -478,7 +478,63 @@
         },
 
         "branch_hr_ccs_start": {
-            "bodyText": "temp",
+            "bodyText": "Do your employees have opportunities to offer up ideas for how the company functions?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Yes, and we make sure that employees know about them.",
+                    "goesTo": "branch_hr_ccs_2"
+                },
+                {
+                    "text": "Yes, but they are not our focus, so they are not brought up a lot.",
+                    "goesTo": "branch_hr_ccs_1.1"
+                },
+                {
+                    "text": "No, there is no leeway in how the company functions right now.",
+                    "goesTo": "branch_hr_ccs_1.2"
+                }
+            ]
+        },
+        "branch_hr_ccs_1.1": {
+            "bodyText": "It is great that you have channels to listen to your employees' ideas, but by not making sure they all know about these channels, you may be missing out on some great ideas. Send some emails, post a flyer, tell your managers to talk to the employees they supervise about it. Offer up a prize for the idea that gets implemented!",
+            "type": "information",
+            "goesTo": "branch_hr_ccs_2"
+        },
+        "branch_hr_ccs_1.2": {
+            "bodyText": "Employees are the heart of how many businesses function. They often know and understand the functions of your business on a deep level, and by not giving them a place to generate ideas, you may be missing out on initiatives that could greatly improve your productivity or brand image.",
+            "type": "information",
+            "goesTo": "branch_hr_ccs_end"
+        },
+        "branch_hr_ccs_2": {
+            "bodyText": "Do your employees' ideas get processed/listened to/implemented?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Not really/not often, we mostly have this to let employees feel like they're being heard.",
+                    "goesTo": "branch_hr_ccs_2.1"
+                },
+                {
+                    "text": "Whenever possible, if the idea brings us profit, we will implement it.",
+                    "goesTo": "branch_hr_ccs_2.2"
+                },
+                {
+                    "text": "We review every idea and if we can easily implement it, we do. Whatever loss in profits this causes is worth the increase in employee satisfaction and engagement.",
+                    "goesTo": "branch_hr_ccs_end"
+                }
+            ]
+        },
+        "branch_hr_ccs_2.1": {
+            "bodyText": "Soliciting ideas from your employees and then not listening to them is very bad HR practice. If this comes out, you will get a bad name amongst employees. You should assign someone to start reading through the backlog of ideas immediately, and implement better practices for handling input as it comes it.",
+            "type": "information",
+            "goesTo": "branch_hr_ccs_end"
+        },
+        "branch_hr_ccs_2.2": {
+            "bodyText": "Listening to your employees' ideas to the point of implementing them is a great first step. Ideas that are not immediately profitable might still be worth considering: maybe they will increase how the company engages with certain values, such as sustainability, and implementing these ideas may still increase employee satisfaction by a great degree.",
+            "type": "information",
+            "goesTo": "branch_hr_ccs_end"
+        },
+        "branch_hr_ccs_end": {
+            "bodyText": "",
             "type": "final"
         },
 
