@@ -653,8 +653,143 @@
 
 
         "branch_sc_start": {
-            "bodyText": "temp",
-            "type": "final"
+            "bodyText": "How much control do you have over your supply chain?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Little to no control: the material I need is rare/not produced by many people at all.",
+                    "goesTo": "branch_sc_1.1"
+                },
+                {
+                    "text": "Some control: there are a decent amount of sources for my material.",
+                    "goesTo": "branch_sc_1.1"
+                },
+                {
+                    "text": "High amount of control: I can be picky with the source for my material, because there are many suppliers.",
+                    "goesTo": "branch_sc_1b"
+                },
+                {
+                    "text": "Total control: I produce the material myself.",
+                    "goesTo": "branch_sc_1b"
+                }
+            ]
+        },
+        "branch_sc_1.1": {
+            "bodyText": "You may want to look into using a different material or material mix. Relying on few sources may end you up in a difficult situation, if they happen to go out of business at some point, or lower their output.",
+            "type": "information",
+            "goesTo": "branch_sc_2"
+        },
+        "branch_sc_1b": {
+            "bodyText": "Do you have a set of regulations/code of conduct you require your suppliers to adhere to?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Yes: I only purchase socially responsible materials. All workers in my supply chain need to be treated well and receive a good wage.",
+                    "goesTo": "branch_sc_2"
+                },
+                {
+                    "text": "Yes, but we do not strictly enforce this.",
+                    "goesTo": "branch_sc_1b.1"
+                },
+                {
+                    "text": "No, we do not have such a structure at this time.",
+                    "goesTo": "branch_sc_1b.2"
+                }
+            ]
+        },
+        "branch_sc_1b.1": {
+            "bodyText": "There have been scandals coming out about companies who say their products are made responsibly, but who do not bother to check anything, or worse, only say that as a front. Take up your social responsibility and ensure that everyone involved in the creation of your product can live off of it.",
+            "type": "information",
+            "goesTo": "branch_sc_2"
+        },
+        "branch_sc_1b.2": {
+            "bodyText": "It is worth looking into, as it will make your own direct employees feel better about being employed with you, and give them more of a sense of purpose (see also the HR employee well-being branch).",
+            "type": "information",
+            "goesTo": "branch_sc_2"
+        },
+        "branch_sc_2": {
+            "bodyText": "From where does your material come?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "I use locally sourced material.",
+                    "goesTo": "branch_sc_3"
+                },
+                {
+                    "text": "I use imported material from further away.",
+                    "goesTo": "branch_sc_2.1"
+                },
+                {
+                    "text": "I buy whatever I can find.",
+                    "goesTo": "branch_sc_2.2"
+                }
+            ]
+        },
+        "branch_sc_2.1": {
+            "bodyText": "Consumers and lawmakers are becoming more aware of the carbon footprint of importing material. It may be worth to try to get ahead of the taxes and change your used material to something you can source locally instead.",
+            "type": "information",
+            "goesTo": "branch_sc_3"
+        },
+        "branch_sc_2.2": {
+            "bodyText": "If you are uncertain about your supply of material, it is a good idea to look into changing your material (mix). Think about the properties of what you use right now, what your product needs, and what is more easily/widely available to you.",
+            "type": "information",
+            "goesTo": "branch_sc_3"
+        },
+        "branch_sc_3": {
+            "bodyText": "Is the material you use sustainable/it does not pollute its environment when used/extracted?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Yes, it is sustainable and not damaging to the environment.",
+                    "goesTo": "branch_sc_4"
+                },
+                {
+                    "text": "Mostly: I cannot use truly sustainable materials (due to required properties of my products), but I am doing the next best thing.",
+                    "goesTo": "branch_sc_3.1"
+                },
+                {
+                    "text": "No/not really.",
+                    "goesTo": "branch_sc_3.2"
+                }
+            ]
+        },
+        "branch_sc_3.1": {
+            "bodyText": "If you cannot use truly sustainable materials for your current product, see if you can rethink the design. Is it really required for this product, or is it just required for your current implementation of it?",
+            "type": "information",
+            "goesTo": "branch_sc_4"
+        },
+        "branch_sc_3.2": {
+            "bodyText": "Earth is running out of certain materials, and others are heavy pollutants. As lawmakers and consumers become more aware of this, get ahead of the inevitable taxes and see if you can change the material you use and/or the product design to use more sustainable resources.",
+            "type": "information",
+            "goesTo": "branch_sc_4"
+        },
+        "branch_sc_4": {
+            "bodyText": "Do you waste a lot of material during production?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "No: nothing is wasted.",
+                    "goesTo": "branch_sc_end"
+                },
+                {
+                    "text": "Some material is lost during production, but we cannot refine it further.",
+                    "goesTo": "branch_sc_4.1"
+                },
+                {
+                    "text": "We have not put thought into refining our production pipeline.",
+                    "goesTo": "branch_sc_4.2"
+                }
+            ]
+        },
+        "branch_sc_4.1": {
+            "bodyText": "Losing material is uneconomical. You might be able to do something else with the material instead of using it for its original purpose - see the concept of Industrial Symbiosis, or produce something else entirely with it.",
+            "type": "information",
+            "goesTo": "branch_sc_end"
+        },
+        "branch_sc_4.2": {
+            "bodyText": "Being able to use all the material you buy, not having to throw any of it out, is an economical advantage. Look into ways for your pipeline to be more optimised material-wise, or get creative and design new products with the material leftovers from the original ones.",
+            "type": "information",
+            "goesTo": "branch_sc_end"
         }
     }
 }
