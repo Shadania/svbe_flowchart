@@ -249,10 +249,162 @@
         },
 
 
-        "branch_hr_ew_start": {
-            "bodyText": "temp",
+        "branch_hr_ew_1": {
+            "bodyText": "What is the place of an employee in your company?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "To work for me - I already have a very defined vision of what I want to do",
+                    "goesTo": "branch_hr_ew_1.1"
+                },
+                {
+                    "text": "To help build this company with me - I prefer a more horizontal management style and want their input",
+                    "goesTo": "branch_hr_ew_2"
+                }
+            ]
+        },
+        "branch_hr_ew_1.1": {
+            "bodyText": "Employees have increased productivity if they feel like they have a say in the goings-on of their place of work. Think: are there any ways in which you could use their input/expertise?",
+            "type": "information",
+            "goesTo": "branch_hr_ew_2"
+        },
+        "branch_hr_ew_2": {
+            "bodyText": "Does your company have an explicitly stated purpose outside of making profit?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "No, that is our main and only focus",
+                    "goesTo": "branch_hr_ew_2.1"
+                },
+                {
+                    "text": "Yes, to provide customers with our products",
+                    "goesTo": "branch_hr_ew_2.1"
+                },
+                {
+                    "text": "Yes, we are committed to a cause that does not directly benefit us to support",
+                    "goesTo": "branch_hr_ew_3"
+                }
+            ]
+        },
+        "branch_hr_ew_3": {
+            "bodyText": "How many hours per week do your employees work on average?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "A normal 40 hour work week",
+                    "goesTo": "branch_hr_ew_3.1"
+                },
+                {
+                    "text": "A reduced work week",
+                    "goesTo": "branch_hr_ew_3.2"
+                },
+                {
+                    "text": "They work flexible hours that they choose",
+                    "goesTo": "branch_hr_ew_4"
+                }
+            ]
+        },
+        "branch_hr_ew_3.1": {
+            "bodyText": "The 40 hour work week is in the process of being phased out in various countries and industries. With the level of automation we enjoy in society, it is simply no longer necessary, and less work hours per week has been shown to be beneficial to employees' mental health. Consider ways in which you can lower working hour requirements, if possible, and consider hybrid hour structures/letting your employees choose when and how long they work.",
+            "type": "information",
+            "goesTo": "branch_hr_ew_4"
+        },
+        "branch_hr_ew_3.2": {
+            "bodyText": "Reduced working hours is a big step in the right direction - employees also enjoy being able to choose their own working hours. Investigate whether or not this model is a fit for your business.",
+            "type": "information",
+            "goesTo": "branch_hr_ew_4"
+        },
+        "branch_hr_ew_4": {
+            "bodyText": "How is the workload (not hours!) distributed amongst your employees?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Everyone has a load that is appropriate for their job description and capabilities",
+                    "goesTo": "branch_hr_ew_5"
+                },
+                {
+                    "text": "Workload is difficult to distribute equally, some employees have more work than others, but are compensated equally",
+                    "goesTo": "branch_hr_ew_4.1"
+                },
+                {
+                    "text": "Unsure",
+                    "goesTo": "branch_hr_ew_4.2"
+                },
+                {
+                    "text": "Workload is difficult to distribute equally, employees do not get different wages based on their workload",
+                    "goesTo": "branch_hr_ew_4.2"
+                }
+            ]
+        },
+        "branch_hr_ew_4.1": {
+            "bodyText": "Compensating employees differently based on workloads is logically correct, though it is a difficult system to balance: ensure that the balance is never off, that other employees do not get jealous, that the extra workload is taken on because the employee is capable and does not just need cash, ensuring that employees with extra load do not experience excessive stress because of it...",
+            "type": "information",
+            "goesTo": "branch_hr_ew_5"
+        },
+        "branch_hr_ew_4.2": {
+            "bodyText": "It can be that sometimes, workload is impossible to distribute equally. In this case, look into hiring employees for differing amounts of hours, having them on-call, or compensating them for their extra effort. Though, it is a difficult system to balance, and your priority should be to ensure that no employee is overly stressed by their workload.",
+            "type": "information",
+            "goesTo": "branch_hr_ew_5"
+        },
+        "branch_hr_ew_5": {
+            "bodyText": "Where do your employees work?",
+            "type":"multipleChoice",
+            "choices": [
+                {
+                    "text": "In the office/factory, because we prefer everyone to be together when they work for maximum productivity",
+                    "goesTo": "branch_hr_ew_5.1"
+                },
+                {
+                    "text": "In the office/factory, because our work cannot be done from home",
+                    "goesTo": "branch_hr_ew_6"
+                },
+                {
+                    "text": "Hybrid options: employees can choose to work from home or the office on some days",
+                    "goesTo": "branch_hr_ew_6"
+                }
+            ]
+        },
+        "branch_hr_ew_5.1": {
+            "bodyText": "Employees have been shown to prefer hybrid or even fully work-from-home options, as it increases their independence, or they may have a family situation. Look into whether this is possible for your situation, which infrastructure to adapt...",
+            "type": "information",
+            "goesTo": "branch_hr_ew_6"
+        },
+        "branch_hr_ew_6": {
+            "bodyText": "What happens if something happens to an employee that (temporarily) diminishes their capability to work?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Nothing changes, we don't have that flexibility",
+                    "goesTo": "branch_hr_ew_6.1"
+                },
+                {
+                    "text": "We have managers trained to handle these situations case-by-case and the resources to facilitate solutions they come up with",
+                    "goesTo": "branch_hr_ew_end"
+                },
+                {
+                    "text": "Employees have sufficient time off available to deal with events in their own time",
+                    "goesTo": "branch_hr_ew_6.2"
+                }
+            ]
+        },
+        "branch_hr_ew_6.1": {
+            "bodyText": "It may be worth looking into training your management to handle employee situations nonetheless, as research shows that even just having this option improves employee morale.",
+            "type": "information",
+            "goesTo": "branch_hr_ew_end"
+        },
+        "branch_hr_ew_6.2": {
+            "bodyText": "Giving employees sufficient time off is a step in the good direction, though having systems in place and managers trained explicitly to deal with individual situations can improve employee morale and your ability to handle these situations.",
+            "type": "information",
+            "goesTo": "branch_hr_ew_end"
+        },
+        "branch_hr_ew_end": {
+            "bodyText": "",
             "type": "final"
         },
+
+
+
+
         "branch_hr_sp_start": {
             "bodyText": "temp",
             "type": "final"
