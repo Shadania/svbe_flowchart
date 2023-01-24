@@ -402,13 +402,81 @@
             "type": "final"
         },
 
-
-
-
         "branch_hr_sp_start": {
-            "bodyText": "temp",
+            "bodyText": "Are you aware of the current knowledge and skill levels of your workforce?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Yes.",
+                    "goesTo": "branch_hr_sp_2"
+                },
+                {
+                    "text": "No.",
+                    "goesTo": "branch_hr_sp_1.1"
+                }
+            ]
+        },
+        "branch_hr_sp_1.1": {
+            "bodyText": "You should be aware of what your employees are and are not capable of, both to avoid overloading them with work they cannot do and to adequately estimate progress towards your goals as a company.",
+            "type": "information",
+            "goesTo": "branch_hr_sp_2"
+        },
+        "branch_hr_sp_2": {
+            "bodyText": "Are you aware of which skills, employees and resources you need for your goals?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Yes.",
+                    "goesTo": "branch_hr_sp_3"
+                },
+                {
+                    "text": "No.",
+                    "goesTo": "branch_hr_sp_2.1"
+                }
+            ]
+        },
+        "branch_hr_sp_2.1": {
+            "bodyText": "You should be aware of what it will take to reach your goals. To orient yourself in the problem you want to solve, you must know what it consists of.",
+            "type": "information",
+            "goesTo": "branch_hr_sp_3"
+        },
+        "branch_hr_sp_3": {
+            "bodyText": "Are the skills of your employees and the requirements for your goals a good match?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "I don't know: I need to investigate either/both of these further.",
+                    "goesTo": "branch_hr_sp_end"
+                },
+                {
+                    "text": "Yes.",
+                    "goesTo": "branch_hr_sp_end"
+                },
+                {
+                    "text": "No: my employees are more skilled than my goals require.",
+                    "goesTo": "branch_hr_sp_3.1"
+                },
+                {
+                    "text": "No: my goals require more skilled employees.",
+                    "goesTo": "branch_hr_sp_3.2"
+                }
+            ]
+        },
+        "branch_hr_sp_3.1": {
+            "bodyText": "Having more human skill in your arsenal than you require can be good news! You can be more ambitious with your goals, or downsize your workforce if you must.",
+            "type": "information",
+            "goesTo": "branch_hr_sp_end"
+        },
+        "branch_hr_sp_3.2": {
+            "bodyText": "If your goals are too ambitious for your current workforce to achieve, either consider lowering them or work to expand your workforce and their skills to fit your needs. Recruit, (re)train, organize workshops and skill development labs, or outsource work.",
+            "type": "information",
+            "goesTo": "branch_hr_sp_end"
+        },
+        "branch_hr_sp_end": {
+            "bodyText": "",
             "type": "final"
         },
+
         "branch_hr_ccs_start": {
             "bodyText": "temp",
             "type": "final"
