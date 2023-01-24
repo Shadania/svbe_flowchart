@@ -790,6 +790,10 @@
             "bodyText": "Being able to use all the material you buy, not having to throw any of it out, is an economical advantage. Look into ways for your pipeline to be more optimised material-wise, or get creative and design new products with the material leftovers from the original ones.",
             "type": "information",
             "goesTo": "branch_sc_end"
+        },
+        "branch_sc_end": {
+            "bodyText": "",
+            "type": "final"
         }
     }
 }
