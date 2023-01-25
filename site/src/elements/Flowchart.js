@@ -97,7 +97,9 @@ class Flowchart extends React.Component {
                 return answers
             case 'information':
                 return (
-                    <Answer data={{'text': 'Ok', 'goesTo':qData['goesTo']}} onClick={onClick} color={this.state.color} />
+                    <div className="flex flex-row">
+                        <Answer data={{'text': 'Ok', 'goesTo':qData['goesTo']}} onClick={onClick} color={this.state.color} />
+                    </div>
                 )
             case 'range':
                 return qData['choices'].map(

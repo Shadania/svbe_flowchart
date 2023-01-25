@@ -243,7 +243,7 @@
         },
 
 
-        "branch_hr_ew_1": {
+        "branch_hr_ew_start": {
             "bodyText": "What is the place of an employee in your company?",
             "type": "multipleChoice",
             "choices": [
@@ -279,6 +279,11 @@
                     "goesTo": "branch_hr_ew_3"
                 }
             ]
+        },
+        "branch_hr_ew_2.1": {
+            "bodyText": "It is good to have an explicitly stated purpose outside of the obvious ones (making profit, providing product). Employees stand to gain more of a sense of purpose working for you and deriving meaning from their job.",
+            "type": "information",
+            "goesTo": "branch_hr_ew_3"
         },
         "branch_hr_ew_3": {
             "bodyText": "How many hours per week do your employees work on average?",
