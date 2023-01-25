@@ -107,12 +107,6 @@
                     "title": "Human Resources: Employee Wellbeing"
                 },
                 {
-                    "text": "Social responsibility: you can't make sustainable products if the neighborhood you are located in suffers because of your operations",
-                    "goesTo": "branch_mark_start",
-                    "branch": "Marketing",
-                    "title": "Marketing"
-                },
-                {
                     "text": "The product's design: creating products that are easy to repair/recycle",
                     "goesTo": "branch_pd_start",
                     "branch": "Product Design",
