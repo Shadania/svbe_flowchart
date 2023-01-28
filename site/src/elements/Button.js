@@ -1,5 +1,11 @@
+import {getColorBG} from '../services/colors.js'
+
 export default function Button(props) {
-    var className = `bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-2`
+    var color = "def"
+    if ('color' in props){
+        color = props.color
+    }
+    var className = `${getColorBG(color)} text-white font-bold py-2 px-4 rounded my-2`
     if (!props.visible)
         className += " invisible"
     return (

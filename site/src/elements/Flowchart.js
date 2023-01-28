@@ -15,7 +15,7 @@ class Flowchart extends React.Component {
             currentQ: '_start',
             stateStack: [],
             redoStack: [],
-            color: 'blue',
+            color: 'def',
             title: 'Pick a Branch',
             branch: 'default'
         }
@@ -29,7 +29,7 @@ class Flowchart extends React.Component {
             }
         }
 
-        if (advice.length == 0){
+        if (advice.length === 0){
             return (<p>No advice for you on this branch! Congratulations, you are doing very well! Try another branch?</p>)
         }
         return (
@@ -184,7 +184,7 @@ class Flowchart extends React.Component {
             currentQ: '_start',
             stateStack: [],
             redoStack: [],
-            color: 'blue',
+            color: 'def',
             branch: 'default',
             title: 'Pick a Branch'
         })
