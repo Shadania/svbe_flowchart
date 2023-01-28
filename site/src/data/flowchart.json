@@ -173,7 +173,7 @@
             "goesTo": "mark_pd_0"
         },
         "mark_pd_3": {
-            "bodyText": "It can be useful to have a set of values to adhere to that you can then tell the public about. Employees might feel more of a sense of purpose with them, and the public might be able to relate to you as a business entity more.",
+            "bodyText": "It can be useful to have a set of values to adhere to that you can then tell the public about. Employees might feel more of a sense of purpose if you have them, and the public might be able to relate to you more as a business entity.",
             "type": "information",
             "goesTo": "mark_pd_0"
         },
@@ -182,7 +182,7 @@
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Yes, and it is in line with our values or we do not have values",
+                    "text": "Yes, and it is in line with our values / we do not have values",
                     "goesTo": "mark_pd_4"
                 },
                 {
@@ -200,12 +200,12 @@
             ]
         },
         "mark_pd_5": {
-            "bodyText": "It might be worth to either change your values to align better with the cause you support, or to change the cause itself. The goal is to present a unified front to your target audience, not to confuse them.",
+            "bodyText": "If your values and your publicly supported cause do not line up, it might be good to either change your values to align better with the cause you support, or to change the cause itself. The goal is to present a unified front to your target audience, not to confuse them.",
             "type": "information",
             "goesTo": "mark_pd_4"
         },
         "mark_pd_5.5": {
-            "bodyText": "It can be beneficial to your image to align yourself with a social cause, but if there are none, you might want to consider creating one based on your values. You might be able to ask your employees for ideas if you don't have any (see also the HR: Co-creation branch)",
+            "bodyText": "It can be beneficial to your image to align yourself with a social cause, but if there are none, you might want to consider creating one based on your values. You might be able to ask your employees for ideas if you don't have any (see also the HR: Co-creation of Sustainability branch)",
             "type": "information",
             "goesTo": "mark_pd_4"
         },
@@ -233,9 +233,10 @@
             ]
         },
         "mark_pd_7": {
-            "bodyText": "Your marketing approach is focused on making people want a product for the sake of having the product. With younger generations, this approach will work less and less effectively. Consider switching to a more socially aware branding strategy.",
+            "bodyText": "Your marketing approach is focused on making people want a product for the sake of having the product. With younger generations, this approach will work less and less effectively. Consider switching to a more socially aware branding strategy to retain and even expand your audience.",
             "type": "information",
             "goesTo": "mark_pd_8"
+
         },
         "mark_pd_8": {
             "bodyText": "",
@@ -267,7 +268,7 @@
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "No, that is our main and only focus",
+                    "text": "No, that is our main/only focus",
                     "goesTo": "branch_hr_ew_2.1"
                 },
                 {
@@ -322,7 +323,7 @@
                     "goesTo": "branch_hr_ew_5"
                 },
                 {
-                    "text": "Workload is difficult to distribute equally, some employees have more work than others, but are compensated equally",
+                    "text": "Workload is difficult to distribute equally, some employees have more work than others, but are compensated accordingly",
                     "goesTo": "branch_hr_ew_4.1"
                 },
                 {
@@ -341,7 +342,7 @@
             "goesTo": "branch_hr_ew_5"
         },
         "branch_hr_ew_4.2": {
-            "bodyText": "It can be that sometimes, workload is impossible to distribute equally. In this case, look into hiring employees for differing amounts of hours, having them on-call, or compensating them for their extra effort. Though, it is a difficult system to balance, and your priority should be to ensure that no employee is overly stressed by their workload.",
+            "bodyText": "It can be that sometimes workload is a challenge to distribute equally. In this case, look into hiring employees for differing amounts of hours, having them on-call, or compensating them for their extra effort. Though, it is a difficult system to balance, and your priority should be to ensure that no employee is overly stressed by their workload.",
             "type": "information",
             "goesTo": "branch_hr_ew_5"
         },
@@ -364,21 +365,21 @@
             ]
         },
         "branch_hr_ew_5.1": {
-            "bodyText": "Employees have been shown to prefer hybrid or even fully work-from-home options, as it increases their independence, or they may have a family situation. Look into whether this is possible for your situation, which infrastructure to adapt...",
+            "bodyText": "Employees have been shown to prefer hybrid or even fully work-from-home options, as it increases their independence, or they may have a family situation. Look into whether this is possible for your situation, which infrastructure to adapt, etc.",
             "type": "information",
             "goesTo": "branch_hr_ew_6"
         },
         "branch_hr_ew_6": {
-            "bodyText": "What happens if something happens to an employee that (temporarily) diminishes their capability to work?",
+            "bodyText": "What takes place if something happens to an employee that (temporarily) diminishes their capability to work?",
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Nothing changes, we don't have that flexibility",
+                    "text": "Little changes, we don't have that flexibility",
                     "goesTo": "branch_hr_ew_6.1"
                 },
                 {
-                    "text": "We have managers trained to handle these situations case-by-case and the resources to facilitate solutions they come up with",
-                    "goesTo": "branch_hr_ew_end"
+                    "text": "We have managers trained to handle these situations case-by-case, and the resources to facilitate solutions they come up with",
+                    "goesTo": "branch_hr_ew_7"
                 },
                 {
                     "text": "Employees have sufficient time off available to deal with events in their own time",
@@ -387,12 +388,35 @@
             ]
         },
         "branch_hr_ew_6.1": {
-            "bodyText": "It may be worth looking into training your management to handle employee situations nonetheless, as research shows that even just having this option improves employee morale.",
+            "bodyText": "It may be worth looking into training your management to handle employee situations, even if you can't give them PTO, as research shows that even just having this option improves employee morale. Looking into how HR can inspire healthy habits for individuals may contribute to employee morale as well, and might prevent health events.",
             "type": "information",
-            "goesTo": "branch_hr_ew_end"
+            "goesTo": "branch_hr_ew_7"
         },
         "branch_hr_ew_6.2": {
-            "bodyText": "Giving employees sufficient time off is a step in the good direction, though having systems in place and managers trained explicitly to deal with individual situations can improve employee morale and your ability to handle these situations.",
+            "bodyText": "Giving employees sufficient time off when they experience hardship is a step in the good direction, though having systems in place and managers trained explicitly to deal with individual situations can improve employee morale and your ability to handle these situations. Having one-on-one conversations can help to achieve mutual understanding.",
+            "type": "information",
+            "goesTo": "branch_hr_ew_7"
+        },
+        "branch_hr_ew_7": {
+            "bodyText": "How strong of a hierarchy is established within your company?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Management makes all the decisions for the company, employees simply complete their tasks",
+                    "goesTo": "branch_hr_ew_7.1"
+                },
+                {
+                    "text": "Our organisation is very much top-down, but we allow employees to approach management",
+                    "goesTo": "branch_hr_ew_7.1"
+                },
+                {
+                    "text": "Employees are on a similar hierarchical level as management, decisions are made taking employees' thoughts into account",
+                    "goesTo": "branch_hr_ew_end"
+                }
+            ]
+        },
+        "branch_hr_ew_7.1": {
+            "bodyText": "Aiming to include employees in a horizontal management style can inspire autonomy and feelings of value. Focus on leadership and management which is approachable and makes decisions horizontally.",
             "type": "information",
             "goesTo": "branch_hr_ew_end"
         },
@@ -402,72 +426,100 @@
         },
 
         "branch_hr_sp_start": {
-            "bodyText": "Are you aware of the current knowledge and skill levels of your workforce?",
+            "bodyText": "Are you aware of the gap between current knowledge and skill levels of your workforce and what is necessary for your future goals?",
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Yes.",
+                    "text": "Yes",
+                    "goesTo": "branch_hr_sp_4"
+                },
+                {
+                    "text": "No, but I would like an informal approach to assess this gap",
                     "goesTo": "branch_hr_sp_2"
                 },
                 {
-                    "text": "No.",
-                    "goesTo": "branch_hr_sp_1.1"
+                    "text": "No, but I would like an analytics tool to assess this gap",
+                    "goesTo": "branch_hr_sp_5"
                 }
+
             ]
         },
-        "branch_hr_sp_1.1": {
-            "bodyText": "You should be aware of what your employees are and are not capable of, both to avoid overloading them with work they cannot do and to adequately estimate progress towards your goals as a company.",
-            "type": "information",
-            "goesTo": "branch_hr_sp_2"
-        },
         "branch_hr_sp_2": {
-            "bodyText": "Are you aware of which skills, employees and resources you need for your goals?",
+            "bodyText": "To assess the gap between your workforce's skills and your goals' requirements, it is necessary to first establish the capacity of your employees. Are you aware of the knowledge and skills levels of your workforce?",
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Yes.",
+                    "text": "Yes, I know their capacity very well",
                     "goesTo": "branch_hr_sp_3"
                 },
                 {
-                    "text": "No.",
-                    "goesTo": "branch_hr_sp_2.1"
+                    "text": "Not sufficiently",
+                    "goesTo": "branch_hr_sp_2.2"
+                },
+                {
+                    "text": "No, I need to research this",
+                    "goesTo": "branch_hr_sp_2.2"
                 }
             ]
         },
-        "branch_hr_sp_2.1": {
-            "bodyText": "You should be aware of what it will take to reach your goals. To orient yourself in the problem you want to solve, you must know what it consists of.",
+        "branch_hr_sp_2.2": {
+            "bodyText": "In order to determine the current skill level of your employees, ask yourself the following questions: what skills and expertise do they currently have? Are my employees able to adopt more responsibility? Personal communcations with employees might help with this determination.",
             "type": "information",
             "goesTo": "branch_hr_sp_3"
         },
         "branch_hr_sp_3": {
-            "bodyText": "Are the skills of your employees and the requirements for your goals a good match?",
+            "bodyText": "Are you aware of which skills, employees and resources you need for your goals?",
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "I don't know: I need to investigate either/both of these further.",
-                    "goesTo": "branch_hr_sp_end"
+                    "text": "Yes",
+                    "goesTo": "branch_hr_sp_4"
                 },
                 {
-                    "text": "Yes.",
-                    "goesTo": "branch_hr_sp_end"
-                },
-                {
-                    "text": "No: my employees are more skilled than my goals require.",
+                    "text": "No",
                     "goesTo": "branch_hr_sp_3.1"
-                },
-                {
-                    "text": "No: my goals require more skilled employees.",
-                    "goesTo": "branch_hr_sp_3.2"
                 }
             ]
         },
         "branch_hr_sp_3.1": {
-            "bodyText": "Having more human skill in your arsenal than you require can be good news! You can be more ambitious with your goals, or downsize your workforce if you must.",
+            "bodyText": "You should be aware of what it will take to reach your goals. Ask yourself the following questions: how many employees do I need to meet my goals, what skills and expertise do I require? Can I organise workshops to learn these required skills?",
+            "type": "information",
+            "goesTo": "branch_hr_sp_4"
+        },
+        "branch_hr_sp_4": {
+            "bodyText": "Are the skills of your employees and the requirements for your goals a good match?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "I don't know: I need to investigate either/both of these further",
+                    "goesTo": "branch_hr_sp_end"
+                },
+                {
+                    "text": "Yes",
+                    "goesTo": "branch_hr_sp_end"
+                },
+                {
+                    "text": "No: my employees are more skilled than my goals require",
+                    "goesTo": "branch_hr_sp_4.1"
+                },
+                {
+                    "text": "No: my goals require more skills and expertise",
+                    "goesTo": "branch_hr_sp_4.2"
+                }
+            ]
+        },
+        "branch_hr_sp_4.1": {
+            "bodyText": "Having more human skill in your arsenal than you require for your goals can be good news! You can be more ambitious with your goals, or downsize your workforce if you must.",
             "type": "information",
             "goesTo": "branch_hr_sp_end"
         },
-        "branch_hr_sp_3.2": {
-            "bodyText": "If your goals are too ambitious for your current workforce to achieve, either consider lowering them or work to expand your workforce and their skills to fit your needs. Recruit, (re)train, organize workshops and skill development labs, or outsource work.",
+        "branch_hr_sp_4.2": {
+            "bodyText": "If your goals are too ambitious for your current workforce to achieve, either consider changing them or work to expand your workforce and their skills to fit your needs. Recruit, (re)train, organize workshops and skill development labs, or outsource work. Ideas of such outsource work can be found in the HR sub-branch co-creation of sustainability.",
+            "type": "information",
+            "goesTo": "branch_hr_sp_end"
+        },
+        "branch_hr_sp_5": {
+            "bodyText": "A sustainability strengths, opportunities, weaknesses and threats analysis can be used to approach the gap. See more information on: https://www.threebility.com/post/the-sustainability-swot-analysis.",
             "type": "information",
             "goesTo": "branch_hr_sp_end"
         },
@@ -477,7 +529,7 @@
         },
 
         "branch_hr_ccs_start": {
-            "bodyText": "Do your employees have opportunities to offer up ideas for how the company functions?",
+            "bodyText": "To create sustainability on a larger scale, collaboration with multiple minds is necessary. Do your employees have opportunities to offer up ideas for how the company functions?",
             "type": "multipleChoice",
             "choices": [
                 {
@@ -500,7 +552,7 @@
             "goesTo": "branch_hr_ccs_2"
         },
         "branch_hr_ccs_1.2": {
-            "bodyText": "Employees are the heart of how many businesses function. They often know and understand the functions of your business on a deep level, and by not giving them a place to generate ideas, you may be missing out on initiatives that could greatly improve your productivity or brand image.",
+            "bodyText": "Employees are the heart of how many businesses function. They often know and understand the functions of your business on a deep level, and by not giving them a place to generate ideas, you may be missing out on initiatives that could greatly improve your productivity or brand image. Create channels for them to give feedback and/or ideas, and start reaping the fruits that have always been there.",
             "type": "information",
             "goesTo": "branch_hr_ccs_end"
         },
@@ -518,17 +570,73 @@
                 },
                 {
                     "text": "We review every idea and if we can easily implement it, we do. Whatever loss in profits this causes is worth the increase in employee satisfaction and engagement.",
-                    "goesTo": "branch_hr_ccs_end"
+                    "goesTo": "branch_hr_ccs_2b"
                 }
             ]
         },
         "branch_hr_ccs_2.1": {
-            "bodyText": "Soliciting ideas from your employees and then not listening to them is very bad HR practice. If this comes out, you will get a bad name amongst employees. You should assign someone to start reading through the backlog of ideas immediately, and implement better practices for handling input as it comes it.",
+            "bodyText": "Soliciting ideas from your employees and then not listening to them is very bad HR practice. If this comes out, you will get a bad name amongst employees. You should assign someone to start reading through the backlog of ideas immediately, and implement better practices for handling input as it comes in.",
             "type": "information",
-            "goesTo": "branch_hr_ccs_end"
+            "goesTo": "branch_hr_ccs_2b"
         },
         "branch_hr_ccs_2.2": {
             "bodyText": "Listening to your employees' ideas to the point of implementing them is a great first step. Ideas that are not immediately profitable might still be worth considering: maybe they will increase how the company engages with certain values, such as sustainability, and implementing these ideas may still increase employee satisfaction by a great degree.",
+            "type": "information",
+            "goesTo": "branch_hr_ccs_2b"
+        },
+        "branch_hr_ccs_2b": {
+            "bodyText": "Would you like some ideas for some initiatives to get your employees thinking about sustainability?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Show me the way!",
+                    "goesTo": "branch_hr_ccs_3"
+                },
+                {
+                    "text": "No thanks, I prefer finding my own way.",
+                    "goesTo": "branch_hr_ccs_end"
+                }
+            ]
+        },
+        "branch_hr_ccs_3": {
+            "bodyText": "Some ideas to encourage your employees to think about sustainability are: Sustainability Centre Assen, Drenthe Reist Duurzaam, Drentse Kei or the Ellen MacArthur foundation. Which one would you like to learn more about?",
+            "type": "multipleChoice",
+            "choices": [
+                {
+                    "text": "Sustainability Centre Assen",
+                    "goesTo": "branch_hr_ccs_4.1"
+                },
+                {
+                    "text": "Drenthe Reist Duurzaam",
+                    "goesTo": "branch_hr_ccs_4.2"
+                },
+                {
+                    "text": "Drentse Kei",
+                    "goesTo": "branch_hr_ccs_4.3"
+                },
+                {
+                    "text": "Ellen MacArthur foundation",
+                    "goesTo": "branch_hr_ccs_4.4"
+                }
+            ]
+        },
+        "branch_hr_ccs_4.1": {
+            "bodyText": "Sustainability Centre Assen is a possible location for an excursion with a group of the company. The location offers both a location for business meetings and opportunities to learn about sustainability (practices). Such sustainability practices include implementations for at home or the planting of new vegetation",
+            "type": "information",
+            "goesTo": "branch_hr_ccs_end"
+        },
+        "branch_hr_ccs_4.2": {
+            "bodyText": "Drenthe Reist Duurzaam offers free advice for entrepreneurs to stimulate bicycle usage of employees. Mobility of employees often has large costs and CO2-outputs, which can be reduced through travelling by bike. Furthermore, employees that commute by bike are generally healthier, contributing to employee well-being",
+            "type": "information",
+            "goesTo": "branch_hr_ccs_end"
+        },
+        "branch_hr_ccs_4.3": {
+            "bodyText": "The organisation 'Drentse Kei' aims to guide citizens (of the province of Drenthe) towards sustainability. Some important aspects of this guidance towards sustainability include: energy savings, energy production, energy supply and initiating cooperations",
+            "type": "information",
+            "goesTo": "branch_hr_ccs_end"
+        },
+        "branch_hr_ccs_4.4": {
+            "bodyText": "The Ellen MacArthur Foundation is a widely known international platform which supports sustainability, mainly through the notion of circular economies. The platform aims to drive significant change, ensuring that collaborations brought through its initiatives bring system-level change",
             "type": "information",
             "goesTo": "branch_hr_ccs_end"
         },
@@ -543,19 +651,19 @@
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Single-use.",
+                    "text": "Single-use",
                     "goesTo": "branch_pd_1.1"
                 },
                 {
-                    "text": "It will last for the period of the warranty.",
+                    "text": "It will last for the period of the warranty",
                     "goesTo": "branch_pd_1.2"
                 },
                 {
-                    "text": "It will last as long as we can make it last.",
+                    "text": "It will last as long as we can make it last",
                     "goesTo": "branch_pd_1.3"
                 },
                 {
-                    "text": "Our product is actually the service our product provides: e.g. we provide the service of 'light' and maintain the lightbulbs in a building for a recurring fee instead of just selling lightbulbs.",
+                    "text": "Our product is actually the service our product provides: e.g. we provide the service of 'light' and maintain the lightbulbs in a building for a recurring fee instead of just selling lightbulbs",
                     "goesTo": "branch_pd_2"
                 }
             ]
@@ -612,11 +720,11 @@
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Yes.",
+                    "text": "Yes",
                     "goesTo": "branch_pd_3"
                 },
                 {
-                    "text": "No.",
+                    "text": "No",
                     "goesTo": "branch_pd_2b.1"
                 }
             ]
@@ -674,7 +782,7 @@
             ]
         },
         "branch_sc_1.1": {
-            "bodyText": "You may want to look into using a different material or material mix. Relying on few sources may end you up in a difficult situation, if they happen to go out of business at some point, or lower their output.",
+            "bodyText": "You may want to look into using a different material or material mix for your product. Relying on few sources may end you up in a difficult situation, if they happen to go out of business at some point, or lower their output.",
             "type": "information",
             "goesTo": "branch_sc_2"
         },
@@ -683,26 +791,26 @@
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "Yes: I only purchase socially responsible materials. All workers in my supply chain need to be treated well and receive a good wage.",
+                    "text": "Yes: I only purchase socially responsible materials. All workers in my supply chain need to be treated well and receive a good wage",
                     "goesTo": "branch_sc_2"
                 },
                 {
-                    "text": "Yes, but we do not strictly enforce this.",
+                    "text": "Yes, but we do not strictly enforce this",
                     "goesTo": "branch_sc_1b.1"
                 },
                 {
-                    "text": "No, we do not have such a structure at this time.",
+                    "text": "No, we do not have such a structure at this time",
                     "goesTo": "branch_sc_1b.2"
                 }
             ]
         },
         "branch_sc_1b.1": {
-            "bodyText": "There have been scandals coming out about companies who say their products are made responsibly, but who do not bother to check anything, or worse, only say that as a front. Take up your social responsibility and ensure that everyone involved in the creation of your product can live off of it.",
+            "bodyText": "There have been scandals coming out about companies who say their products are made responsibly, but who do not bother to check anything, or worse, only say that as a front, whose products are then discovered to have been made with slave labour. Take up your social responsibility and ensure that everyone involved in the creation of your product can live off of it.",
             "type": "information",
             "goesTo": "branch_sc_2"
         },
         "branch_sc_1b.2": {
-            "bodyText": "It is worth looking into, as it will make your own direct employees feel better about being employed with you, and give them more of a sense of purpose (see also the HR employee well-being branch).",
+            "bodyText": "A code of conduct for your suppliers is worth looking into, as it will make your own direct employees feel better about being employed with you, and give them more of a sense of purpose (see also the HR employee well-being branch).",
             "type": "information",
             "goesTo": "branch_sc_2"
         },
@@ -711,15 +819,15 @@
             "type": "multipleChoice",
             "choices": [
                 {
-                    "text": "I use locally sourced material.",
+                    "text": "I use locally sourced material",
                     "goesTo": "branch_sc_3"
                 },
                 {
-                    "text": "I use imported material from further away.",
+                    "text": "I use imported material from further away",
                     "goesTo": "branch_sc_2.1"
                 },
                 {
-                    "text": "I buy whatever I can find.",
+                    "text": "I buy whatever I can find",
                     "goesTo": "branch_sc_2.2"
                 }
             ]
@@ -753,7 +861,7 @@
             ]
         },
         "branch_sc_3.1": {
-            "bodyText": "If you cannot use truly sustainable materials for your current product, see if you can rethink the design. Is it really required for this product, or is it just required for your current implementation of it?",
+            "bodyText": "If you cannot use truly sustainable materials for your current product, see if you can rethink the design. Is this material really required for this product, or is it just required for your current implementation of it?",
             "type": "information",
             "goesTo": "branch_sc_4"
         },
