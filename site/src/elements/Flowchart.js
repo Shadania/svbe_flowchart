@@ -16,14 +16,13 @@ class Flowchart extends React.Component {
             stateStack: [],
             redoStack: [],
             color: 'def',
-            title: 'Pick a Branch',
-            branch: 'default'
+            title: 'Pick a Branch'
         }
     }
     renderAdvice = () => {
         var advice = []
         for (var i = 0; i < this.state.stateStack.length; i++) {
-            const thisState = this.state.stateStack[i]
+            const thisState = this.state.stateStack[i]['id']
             if (data.states[thisState].type === 'information') {
                 advice.push(data.states[thisState].bodyText)
             }
@@ -54,15 +53,7 @@ class Flowchart extends React.Component {
                     if ('branch' in choice) {
                         color = getBranchCol(choice['branch'])
                         onClickAnswer = (goesTo) => {
-                            this.setState({
-                                currentQ: this.state.currentQ,
-                                stateStack: this.state.stateStack,
-                                redoStack: this.state.redoStack,
-                                color: color,
-                                title: choice['title'],
-                                branch: choice['branch']
-                            })
-                            onClick(goesTo, color, choice['branch'], choice['title'])
+                            onClick(goesTo, color, choice['title'])
                         }
                     }
                     return (
@@ -119,11 +110,14 @@ class Flowchart extends React.Component {
         }
     }
 
-    nextQuestion = (new_q_id, color=null, branch=null, title=null) => {
+    nextQuestion = (new_q_id, color=null, title=null) => {
         var newStateStack = this.state.stateStack
-        newStateStack.push(this.state.currentQ)
+        newStateStack.push({
+            "id": this.state.currentQ,
+            "color": this.state.color,
+            "title": this.state.title
+        })
         var newColor = (color? color : this.state.color)
-        var newBranch = (branch? branch : this.state.branch)
         var newTitle = (title? title : this.state.title)
 
         this.setState({
@@ -131,12 +125,10 @@ class Flowchart extends React.Component {
             stateStack: newStateStack,
             redoStack: [],
             color: newColor,
-            branch: newBranch,
             title: newTitle
         })
     }
 
-    /*
     undo = () => {
         var newStateStack = this.state.stateStack
         if (newStateStack.length < 1)
@@ -144,14 +136,17 @@ class Flowchart extends React.Component {
 
         var newState = newStateStack.pop()
         var newRedoStack = this.state.redoStack
-        newRedoStack.push(this.state.currentQ)
+        newRedoStack.push({
+            "id": this.state.currentQ,
+            "color": this.state.color,
+            "title": this.state.title
+        })
         this.setState({
-            currentQ: newState,
+            currentQ: newState["id"],
             stateStack: newStateStack,
             redoStack: newRedoStack,
-            color: this.state.color,
-            branch: this.state.branch,
-            title: this.state.title
+            color: newState["color"],
+            title: newState["title"]
         })
     }
     canUndo = () => {
@@ -164,20 +159,22 @@ class Flowchart extends React.Component {
         if (newRedoStack.length < 1)
             return
         var newState = newRedoStack.pop()
-        newStateStack.push(this.state.currentQ)
+        newStateStack.push({
+            "id": this.state.currentQ,
+            "color": this.state.color,
+            "title": this.state.title
+        })
         this.setState({
-            currentQ: newState,
+            currentQ: newState["id"],
             stateStack: newStateStack,
             redoStack: newRedoStack,
-            color: this.state.color,
-            branch: this.state.branch,
-            title: this.state.title
+            color: newState["color"],
+            title: newState["title"]
         })
     }
     canRedo = () => {
         return this.state.redoStack.length > 0
     }
-    */
 
     reset = () => {
         this.setState({
@@ -185,7 +182,6 @@ class Flowchart extends React.Component {
             stateStack: [],
             redoStack: [],
             color: 'def',
-            branch: 'default',
             title: 'Pick a Branch'
         })
     }
@@ -195,13 +191,17 @@ class Flowchart extends React.Component {
         return (
             <div>
                 <div className="flex justify-between">
-                    <SectionHeader text={this.state.title} />
-                    <Button onClick={this.reset} text="Reset Flowchart"
-                        visible={true}
-                    />
+                    <div>
+                        <SectionHeader text={this.state.title} />
+                    </div>
+                    <div className="flex justify-end space-x-2">
+                        <Button onClick={this.undo} text="Undo" visible={this.canUndo()}/>
+                        <Button onClick={this.redo} text="Redo" visible={this.canRedo()}/>
+                        <Button onClick={this.reset} text="Reset Flowchart"
+                            visible={true}
+                        />
+                    </div>
                 </div>
-
-                
                 
                 <div className={border_classname}>
                         <div className="m-3">
